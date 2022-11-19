@@ -1,0 +1,563 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>KBQA新方法 · nlp is so easy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="duyongan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../自然语言处理/你还在用TextRank or TFIDF 抽取关键词吗？.html" />
+    
+    
+    <link rel="prev" href="../相似度计算/由词向量word2vec、fastext如何表征句子向量.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://mp.weixin.qq.com/s/y8LE7T9hGkREYNvXmiEDbw" target="_blank" class="custom-link">知识图谱技术前沿</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://mp.weixin.qq.com/s/mOEia5eckFfkdMh8mc2PAg" target="_blank" class="custom-link">句子表征 前世今生</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">基础知识</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../基础知识/理解优化器.html">
+            
+                <a href="../基础知识/理解优化器.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    理解优化器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../基础知识/理解范数惩罚正则化.html">
+            
+                <a href="../基础知识/理解范数惩罚正则化.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    理解范数惩罚正则化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">少样本学习</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../少样本学习/少样本多标签分类.html">
+            
+                <a href="../少样本学习/少样本多标签分类.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    少样本多标签分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">搜索和问答</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../搜索和问答/搜索与问答算法架构的异同.html">
+            
+                <a href="../搜索和问答/搜索与问答算法架构的异同.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    搜索与问答算法架构的异同
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">相似度计算</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../相似度计算/主题模型大全LSA PLSA LDA HDP lda2vec.html">
+            
+                <a href="../相似度计算/主题模型大全LSA PLSA LDA HDP lda2vec.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    主题模型大全LSA PLSA LDA HDP Lda2vec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../相似度计算/原始bert参数如何有效生成句向量.html">
+            
+                <a href="../相似度计算/原始bert参数如何有效生成句向量.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    原始Bert参数如何有效生成句向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../相似度计算/对比学习生成句子向量的最新进展.html">
+            
+                <a href="../相似度计算/对比学习生成句子向量的最新进展.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    对比学习生成句子向量的最新进展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../相似度计算/由词向量word2vec、fastext如何表征句子向量.html">
+            
+                <a href="../相似度计算/由词向量word2vec、fastext如何表征句子向量.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    由词向量Word2vec、Fastext如何表征句子向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">知识图谱</li>
+        
+        
+    
+        <li class="chapter active" data-level="5.1" data-path="KBQA新方法.html">
+            
+                <a href="KBQA新方法.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    KBQA新方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">自然语言处理</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../自然语言处理/你还在用TextRank or TFIDF 抽取关键词吗？.html">
+            
+                <a href="../自然语言处理/你还在用TextRank or TFIDF 抽取关键词吗？.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    你还在用TextRank Or TFIDF 抽取关键词吗？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">语言模型</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../语言模型/anttention为什么除以根号dk.html">
+            
+                <a href="../语言模型/anttention为什么除以根号dk.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Anttention为什么除以根号Dk
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >KBQA新方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#kbqa&#x65B0;&#x65B9;&#x6CD5;"><b>5.1.1. </b>KBQA&#x65B0;&#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5F15;&#x5B50;"><b>5.1.1.1. </b>&#x5F15;&#x5B50;</a></li><li><span class="title-icon "></span><a href="#&#x4E3B;&#x6587;"><b>5.1.1.2. </b>&#x4E3B;&#x6587;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5FAE;&#x8C03;&#x65B9;&#x6CD5;"><b>5.1.1.2.1. </b>&#x5FAE;&#x8C03;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x9884;&#x8BAD;&#x7EC3;&#x65B9;&#x6CD5;"><b>5.1.1.2.2. </b>&#x9884;&#x8BAD;&#x7EC3;&#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5F15;&#x7528;"><b>5.1.1.3. </b>&#x5F15;&#x7528;</a></li></ul></ul></div><a href="#kbqa&#x65B0;&#x65B9;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="kbqa&#x65B0;&#x65B9;&#x6CD5;"><a name="kbqa&#x65B0;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#kbqa&#x65B0;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1.1. KBQA&#x65B0;&#x65B9;&#x6CD5;</h1>
+<p>&#x4EE5;&#x5F80;&#x7684;KBQA&#x6B65;&#x9AA4;&#x8303;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<ol>
+<li>&#x5B9E;&#x4F53;&#x8BC6;&#x522B;</li>
+<li>&#x5B9E;&#x4F53;&#x94FE;&#x63A5;</li>
+<li>&#x610F;&#x56FE;&#x8BC6;&#x522B;&#xFF08;or &#x5173;&#x7CFB;or &#x5C5E;&#x6027;&#x8BC6;&#x522B;&#xFF09;</li>
+<li>&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5E93;</li>
+</ol>
+<p>&#x800C;&#x672C;&#x6587;&#x4E2D;&#x4ECB;&#x7ECD;&#x7684;&#x6765;&#x81EA;&#x7F8E;&#x56E2;<sup><a href="#fn_1" id="reffn_1">1</a></sup>&#x7684;&#x65B9;&#x6848;&#x662F;&#xFF1A;</p>
+<ol>
+<li>&#x5B9E;&#x4F53;&#x8BC6;&#x522B;</li>
+<li>&#x5B9E;&#x4F53;&#x94FE;&#x63A5;</li>
+<li>&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x63A7;&#x5236;&#x6B65;&#x6570;&#xFF09;</li>
+<li>&#x5173;&#x7CFB;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x6253;&#x5206;</li>
+</ol>
+<h2 id="&#x5F15;&#x5B50;"><a name="&#x5F15;&#x5B50;" class="anchor-navigation-ex-anchor" href="#&#x5F15;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1.1.1. &#x5F15;&#x5B50;</h2>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x5C06;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x8BBA;&#x6587;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x5728;&#x4ECB;&#x7ECD;&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x770B;&#x770B;2021&#x5E74;3&#x6708;&#x4EFD;&#x4E00;&#x7BC7;&#x5173;&#x4E8E;&#x77E5;&#x8BC6;&#x8865;&#x5168;&#x7684;&#x6587;&#x7AE0;BERTRL<sup><a href="#fn_2" id="reffn_2">2</a></sup>&#xFF1A;</p>
+<p><img src="https://notebook-media.oss-cn-beijing.aliyuncs.com/img/image-20220912160338451.png" alt="image-20220912160338451"></p>
+<p>&#x4E0E;&#x4EE5;&#x5F80;&#x5C06;&#x77E5;&#x8BC6;&#x56FE;&#x8C31;&#x7528;Trans&#x7CFB;&#x5217;&#x6216;&#x56FE;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x5EFA;&#x6A21;&#x7684;&#x65B9;&#x5F0F;&#x4E0D;&#x540C;&#xFF0C;&#x6587;&#x7AE0;&#x4E2D;&#x5C06;&#x77E5;&#x8BC6;&#x56FE;&#x8C31;&#x7EBF;&#x6027;&#x5316;&#x8F93;&#x5165;&#x5230;Bert&#x4E2D;&#x3002;&#x6587;&#x7AE0;&#x4E2D;&#x63D0;&#x53CA;&#x4E86;&#x4E24;&#x79CD;&#x7EBF;&#x6027;&#x5316;&#x56FE;&#x8C31;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ol>
+<li><p>&#x5C06;&#x6240;&#x6709;&#x6D89;&#x53CA;&#x5F85;&#x9884;&#x6D4B;&#x91CF;&#x4E24;&#x4E2A;&#x5B9E;&#x4F53;&#x4E4B;&#x95F4;&#x7684;&#x8DEF;&#x5F84;&#x540C;&#x65F6;&#x8F93;&#x5165;&#x6A21;&#x578B;</p>
+</li>
+<li><p>&#x5206;&#x522B;&#x5C06;&#x6BCF;&#x79CD;&#x8DEF;&#x5F84;&#x5355;&#x72EC;&#x8F93;&#x5165;&#x6A21;&#x578B;&#xFF0C;&#x4E4B;&#x540E;&#x5206;&#x6570;&#x805A;&#x5408;&#xFF08;&#x6587;&#x4E2D;&#x7684;&#x805A;&#x5408;&#x65B9;&#x5F0F;&#x4E3A;&#x53D6;&#x5206;&#x6570;&#x6700;&#x5927;&#x503C;&#xFF09;
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>s</mi><mi>c</mi><mi>o</mi><mi>r</mi><mi>e</mi></mrow><mo>(</mo><mi>h</mi><mo separator="true">,</mo><mi>r</mi><mo separator="true">,</mo><mi>t</mi><mo>)</mo><mo>=</mo><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow><mi>P</mi><mo>(</mo><mi>y</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">&#x2223;</mi><mi>h</mi><mo separator="true">,</mo><mi>r</mi><mo separator="true">,</mo><mi>t</mi><mo separator="true">,</mo><mi>h</mi><mfrac><mrow><mi>p</mi></mrow><mrow><mi>t</mi></mrow></mfrac><mo separator="true">,</mo><mi>t</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">
+   { s c o r e } ( h , r , t ) =   { max } P ( y = 1 | h , r , t , h \frac { p } { t } , t )
+   </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.095em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit">s</span><span class="mord mathit">c</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span></span><span class="mopen">(</span><span class="mord mathit">h</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord textstyle uncramped"><span class="mord mathit">m</span><span class="mord mathit">a</span><span class="mord mathit">x</span></span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">h</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mpunct">,</span><span class="mord mathit">h</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">t</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.44610799999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">p</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mclose">)</span></span></span></span></p>
+</li>
+</ol>
+<p>&#x8FD9;&#x91CC;&#x4E3E;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;[CLS]&#x59DA;&#x660E;&#x7684;&#x59BB;&#x5B50;&#x662F;&#x8C01;&#xFF1F;&#x662F;&#x53F6;&#x8389;&#x5417;&#xFF1F;[SEP]&#x59DA;&#x660E;&#x7684;&#x5973;&#x513F;&#x662F;&#x59DA;&#x6C81;&#x857E;&#xFF1B;&#x59DA;&#x6C81;&#x857E;&#x7684;&#x5988;&#x5988;&#x662F;&#x53F6;&#x8389;</p>
+<p>&#x5982;&#x6B64;&#x4E00;&#x6765;&#xFF0C;&#x5C31;&#x878D;&#x5408;&#x4E86;&#x77E5;&#x8BC6;&#x56FE;&#x8C31;&#x7684;&#x77E5;&#x8BC6;&#x4EE5;&#x53CA;&#x8BED;&#x4E49;&#x77E5;&#x8BC6;&#x4E86;&#x3002;&#x63D0;&#x5230;&#x8FD9;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x60F3;&#x8D77;&#x88AB;Jena&#x77E5;&#x8BC6;&#x63A8;&#x7406;&#x5DE5;&#x5177;&#x652F;&#x914D;&#x7684;&#x6050;&#x60E7;&#xFF0C;Jena&#x7684;&#x77E5;&#x8BC6;&#x63A8;&#x7406;&#x662F;&#x57FA;&#x4E8E;&#x7ECF;&#x9A8C;&#x4E3B;&#x4E49;&#x7684;&#x89C4;&#x5219;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EC;&#x56DE;&#x7387;&#x6781;&#x4F4E;&#xFF0C;&#x4F46;&#x51C6;&#x786E;&#x7387;&#x9AD8;&#xFF0C;&#x4EE3;&#x7801;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">[rule: (?a :&#x5973;&#x513F; ?b)(?b :&#x5988;&#x5988; ?c) -&gt; (?a :&#x592B;&#x59BB; ?c)]
+</code></pre>
+<p>&#x6709;&#x5173;jena&#x7684;&#x5DE5;&#x7A0B;&#x5316;&#x5B9E;&#x8DF5;&#xFF0C;&#x6709;&#x65F6;&#x95F4;&#x4F1A;&#x7EC6;&#x8BF4;&#x3002;</p>
+<h2 id="&#x4E3B;&#x6587;"><a name="&#x4E3B;&#x6587;" class="anchor-navigation-ex-anchor" href="#&#x4E3B;&#x6587;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1.1.2. &#x4E3B;&#x6587;</h2>
+<p>&#x524D;&#x6587;&#x8BF4;&#x8FC7;&#x6709;&#x4E24;&#x79CD;&#x7EBF;&#x6027;&#x5316;&#x56FE;&#x8C31;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;BERTRL&#x7528;&#x4E86;&#x5355;&#x72EC;&#x8F93;&#x5165;&#x5404;&#x4E2A;&#x8DEF;&#x5F84;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x800C;&#x7F8E;&#x56E2;&#x8FD9;&#x7BC7;&#x7528;&#x4E86;&#x53E6;&#x4E00;&#x79CD;&#xFF0C;&#x5E73;&#x94FA;&#x4E00;&#x6B21;&#x6027;&#x8F93;&#x5165;&#xFF0C;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<p>[CLS]&#x59DA;&#x660E;&#x7684;&#x59BB;&#x5B50;&#x662F;&#x8C01;&#xFF1F;&#x662F;&#x53F6;&#x8389;&#x5417;&#xFF1F;[SEP] &#x59DA;&#x660E;&#x7684;&#x5973;&#x513F;&#x662F;&#x59DA;&#x6C81;&#x857E;&#xFF1B;&#x59DA;&#x6C81;&#x857E;&#x7684;&#x5988;&#x5988;&#x662F;&#x53F6;&#x8389; [SEP] &#x59DA;&#x660E;&#x7684;&#x6BCD;&#x4EB2;&#x662F;&#x65B9;&#x51E4;&#x5A23;&#xFF1B;&#x65B9;&#x51E4;&#x5A23;&#x7684;&#x513F;&#x5AB3;&#x662F;&#x53F6;&#x8389;</p>
+<h3 id="&#x5FAE;&#x8C03;&#x65B9;&#x6CD5;"><a name="&#x5FAE;&#x8C03;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5FAE;&#x8C03;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1.1.2.1. &#x5FAE;&#x8C03;&#x65B9;&#x6CD5;</h3>
+<p><img src="https://notebook-media.oss-cn-beijing.aliyuncs.com/img/image-20220912172548740.png" alt="image-20220912172548740"></p>
+<p>&#x5C06;&#x5168;&#x90E8;&#x8DEF;&#x5F84;&#x4E00;&#x80A1;&#x8111;&#x8F93;&#x5165;&#x6A21;&#x578B;&#xFF0C;&#x9884;&#x6D4B;&#x6863;&#x671F;&#x90A3;&#x5019;&#x9009;&#x5B9E;&#x4F53;&#x662F;&#x5426;&#x4E3A;&#x7B54;&#x6848;&#xFF0C;&#x4E4B;&#x540E;&#x4F9D;&#x6B21;&#x5C06;&#x6240;&#x6709;&#x5019;&#x9009;&#x5B9E;&#x4F53;&#x7B97;&#x51FA;&#x5206;&#x6570;&#xFF0C;&#x5373;&#x8FBE;&#x5230;&#x4E86;&#x76EE;&#x7684;&#x3002;</p>
+<h3 id="&#x9884;&#x8BAD;&#x7EC3;&#x65B9;&#x6CD5;"><a name="&#x9884;&#x8BAD;&#x7EC3;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x9884;&#x8BAD;&#x7EC3;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1.1.2.2. &#x9884;&#x8BAD;&#x7EC3;&#x65B9;&#x6CD5;</h3>
+<p><img src="https://notebook-media.oss-cn-beijing.aliyuncs.com/img/image-20220912172622142.png" alt="image-20220912172622142"></p>
+<p>&#x9664;&#x4E86;&#x76F4;&#x63A5;&#x4F7F;&#x7528;Bert&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x8FDB;&#x884C;&#x5FAE;&#x8C03;&#x4E4B;&#x5916;&#xFF0C;&#x4F5C;&#x8005;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x9884;&#x8BAD;&#x7EC3;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x9884;&#x8BAD;&#x7EC3;&#x4E4B;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x5FAE;&#x8C03;&#x53EF;&#x6709;&#x6548;&#x63D0;&#x9AD8;KBQA&#x6548;&#x679C;&#x3002;&#x4F5C;&#x8005;&#x63D0;&#x51FA;&#x4E86;&#x4E09;&#x79CD;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<ol>
+<li><p>&#x5173;&#x7CFB;&#x62BD;&#x53D6;</p>
+<p>[CLS]&#x53E5;&#x5B50;[SEP]&#x5934;&#x5B9E;&#x4F53;h, &#x5173;&#x7CFB;r, &#x5C3E;&#x5B9E;&#x4F53;t[SEP]  &#x6839;&#x636E;&#x53E5;&#x5B50;&#x9884;&#x6D4B;&#x5934;&#x5B9E;&#x4F53;h&#x548C;&#x5C3E;&#x5B9E;&#x4F53;t&#x662F;&#x5426;&#x5177;&#x6709;&#x5173;&#x7CFB;r</p>
+</li>
+<li><p>&#x5173;&#x7CFB;&#x5339;&#x914D;  </p>
+<p>[CLS]&#x53E5;&#x5B50;1 [SEP]&#x53E5;&#x5B50;2 [SEP]  &#x9884;&#x6D4B;&#x53E5;&#x5B50;1&#x548C;&#x53E5;&#x5B50;2&#x662F;&#x5426;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5173;&#x7CFB;</p>
+</li>
+<li><p>&#x5173;&#x7CFB;&#x63A8;&#x7406;&#x5373;BERTRL</p>
+</li>
+</ol>
+<h2 id="&#x5F15;&#x7528;"><a name="&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1.1.3. &#x5F15;&#x7528;</h2>
+<ol>
+<li>Large-Scale Relation Learning for Question Answering over Knowledge Bases with Pre-trained Language Models</li>
+<li>Inductive Relation Prediction by BERT</li>
+</ol>
+<font size="24">&#x5173;&#x6CE8;&#x672C;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x4E0B;&#x671F;&#x66F4;&#x7CBE;&#x5F69;</font>
+
+<p><img src="https://notebook-media.oss-cn-beijing.aliyuncs.com/img/image-20220930221129484.png" alt="image-20220930221129484" style="zoom: 80%;"></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://mp.weixin.qq.com/s/y8LE7T9hGkREYNvXmiEDbw" target="_blank">&#x675C;&#x6C38;&#x5B89;</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2022-11-19 11:14:55 </span> </footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../相似度计算/由词向量word2vec、fastext如何表征句子向量.html" class="navigation navigation-prev " aria-label="Previous page: 由词向量Word2vec、Fastext如何表征句子向量">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../自然语言处理/你还在用TextRank or TFIDF 抽取关键词吗？.html" class="navigation navigation-next " aria-label="Next page: 你还在用TextRank Or TFIDF 抽取关键词吗？">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"KBQA新方法","level":"5.1","depth":1,"next":{"title":"你还在用TextRank Or TFIDF 抽取关键词吗？","level":"6.1","depth":1,"path":"自然语言处理/你还在用TextRank or TFIDF 抽取关键词吗？.md","ref":"自然语言处理/你还在用TextRank or TFIDF 抽取关键词吗？.md","articles":[]},"previous":{"title":"由词向量Word2vec、Fastext如何表征句子向量","level":"4.4","depth":1,"path":"相似度计算/由词向量word2vec、fastext如何表征句子向量.md","ref":"相似度计算/由词向量word2vec、fastext如何表征句子向量.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","chapter-fold","-search","search-pro","popup","anchor-navigation-ex","mermaid","chinese-video","-sharing","sharing-plus","include-codeblock","ace","-lunr","collapsible-menu","-livereload","prism","-highlight","url-embed","page-footer-ex","donate","splitter","advanced-emoji","katex","livereload"],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"summary":{},"page-footer-ex":{"copyright":"By [杜永安](https://mp.weixin.qq.com/s/y8LE7T9hGkREYNvXmiEDbw)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{},"mermaid":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"donate":{"alipay":"https://notebook-media.oss-cn-beijing.aliyuncs.com/img/image-20221118180118709.png","alipayText":"","button":"捐赠","title":"","wechat":"https://notebook-media.oss-cn-beijing.aliyuncs.com/img/image-20221118180031551.png","wechatText":""},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"bibtex-indexed-cite":{"path":"/"},"url-embed":{},"advanced-emoji":{"embedEmojis":false},"chinese-video":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["weibo","qq","linkedin","qzone","douban"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"duyongan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"nlp is so easy","language":"zh-hans","links":{"sidebar":{"知识图谱技术前沿":"https://mp.weixin.qq.com/s/y8LE7T9hGkREYNvXmiEDbw","句子表征 前世今生":"https://mp.weixin.qq.com/s/mOEia5eckFfkdMh8mc2PAg"}},"gitbook":"*"},"file":{"path":"知识图谱/KBQA新方法.md","mtime":"2022-11-19T03:14:55.037Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-19T03:50:30.115Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
